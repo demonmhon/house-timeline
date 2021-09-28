@@ -1,5 +1,5 @@
 {
-  "name": "home-timeline",
+  "name": "house-timeline",
   "version": "1.0.0",
   "engines": {
     "node": ">=10.0.0 <=12.0.0"

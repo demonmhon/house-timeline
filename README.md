@@ -1,4 +1,4 @@
-# home-timeline
+# house-timeline
 
 There are 4 strangers living in the same house: Bill, Elon, Mark, and Tim. This house has 3 shared areas where they can live together: Living Room, Kitchen, and Backyard.
 
