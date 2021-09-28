@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+
+@import 'variables';
+@import 'layouts';
+@import 'pages/blank-page';
+@import 'pages/login';
+
+// Basic Reset
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}

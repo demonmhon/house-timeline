@@ -1,0 +1,6 @@
+{
+  "api": {
+    "baseURL": "https://production-url.domain/",
+    "version": "v1"
+  }
+}

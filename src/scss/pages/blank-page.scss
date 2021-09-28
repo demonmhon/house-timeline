@@ -1,0 +1,11 @@
+.#{$namespace}-page--blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: block;
+    color: #ccc;
+    font-size: 2rem;
+  }
+}
