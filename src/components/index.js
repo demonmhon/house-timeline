@@ -1,4 +1,5 @@
-import Header from './header'
+import Header from './header';
 import TimelineTable from './timeline-table';
-export { Header, TimelineTable };
+import TimelineForm from './timeline-form';
 
+export { Header, TimelineTable, TimelineForm };

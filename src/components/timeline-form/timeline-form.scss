@@ -1,0 +1,14 @@
+@import '../../scss/variables';
+
+.form {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 15px;
+
+  h2 {
+    font-size: 1.2rem;
+    color: $blue;
+    margin: 0;
+    padding: 5px 0 15px;
+  }
+}

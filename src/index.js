@@ -7,10 +7,7 @@ import './scss/styles.scss';
 
 const render = async () => {
   await loadConfig();
-  ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-  );
+  ReactDOM.render(<App />, document.getElementById('app'));
 };
 
 render();

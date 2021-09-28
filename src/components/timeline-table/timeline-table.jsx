@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { useTimelineContext } from '../../contexts/timeline';
 import './timeline-table.scss';
 
-const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
-const rooms = ['livingRoom', 'kitchen', 'backyard'];
 const hourTimeline = [];
 const hours = Array(24)
   .fill('')
@@ -20,8 +18,6 @@ hours
     hourTimeline.push(...h);
   });
 
-console.log(hourTimeline);
-
 const PeopleLabel = (props = {}) => {
   return <div className="timeline__label--people">{props.children}</div>;
 };
@@ -35,12 +31,9 @@ const PeopleTimeBlock = (props = {}) => {
 };
 
 const TimelineTable = (props) => {
-  const data = useTimelineContext();
+  const { data, peoples, areas } = useTimelineContext();
   return (
     <div className="timeline-container">
-      <pre style={{ fontSize: '12px', display: 'none' }}>
-        {JSON.stringify(data, null, '  ')}
-      </pre>
       <div className="timeline__peoples">
         {peoples.map((name) => {
           return <PeopleLabel key={name}>{name}</PeopleLabel>;

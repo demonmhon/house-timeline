@@ -1,7 +1,22 @@
 import React, { createContext, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const initData = {
+const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
+const areas = ['Living Room', 'Kitchen', 'Backyard'];
+const hourTimeline = [];
+const hours = Array(24)
+  .fill('')
+  .map((a, index) => {
+    return index.toString().padStart(2, '0');
+  });
+hours
+  .map((h) => {
+    return [`${h}:00`, `${h}:30`];
+  })
+  .forEach((h) => {
+    hourTimeline.push(...h);
+  });
+const initTimeline = {
   '0000': {
     occupiedRoom: {
       livingRoom: [''],
@@ -21,10 +36,18 @@ const initData = {
 export const TimelineContext = createContext({});
 
 export const TimelineContextProvider = ({ children }) => {
-  const [data, setData] = useState(initData);
+  const [timeline, setTimeline] = useState(initTimeline);
+
+  const addTime = (people, from, to) => {
+    console.log('add time', people, from, to);
+  };
 
   const store = {
-    data: data,
+    peoples,
+    areas,
+    hours: hourTimeline,
+    timeline,
+    addTime,
   };
 
   return (

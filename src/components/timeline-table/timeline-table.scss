@@ -8,30 +8,33 @@
 }
 
 .timeline {
+  $hour-label-height: 25px;
   $block-width: 30px;
   $block-height: 40px;
 
   &__peoples {
     margin-right: 20px;
-    margin-top: $block-height;
+    margin-top: $hour-label-height;
   }
 
   &__label--hour,
   &__label--people {
-    height: $block-height;
     text-align: center;
   }
 
   &__label--hour {
+    height: $hour-label-height;
+    font-size: 0.75rem;
     width: $block-width * 2;
   }
 
   &__label--people {
-
+    height: $block-height;
+    line-height: $block-height;
   }
 
   &__hour-block {
-    &[data-hour$=":30"] {
+    &[data-hour$=':30'] {
       margin-left: -$block-width;
       margin-right: -$block-width;
       .timeline__label--hour {
@@ -50,5 +53,6 @@
     display: flex;
     overflow-x: scroll;
     padding-bottom: 15px;
+    position: relative;
   }
 }

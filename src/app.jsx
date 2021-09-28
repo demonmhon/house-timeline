@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter } from 'react-router-dom';
 
 import { TimelineContextProvider } from './contexts/timeline';
-import { Header, TimelineTable } from './components';
+import { Header, TimelineTable, TimelineForm } from './components';
 
 const App = (props) => {
   useEffect(() => {
@@ -11,16 +10,15 @@ const App = (props) => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <TimelineContextProvider>
-        <div className="app-container">
-          <Header />
-          <div className="app-body">
-            <TimelineTable />
-          </div>
+    <TimelineContextProvider>
+      <div className="app-container">
+        <Header />
+        <div className="app-body">
+          <TimelineTable />
+          <TimelineForm />
         </div>
-      </TimelineContextProvider>
-    </BrowserRouter>
+      </div>
+    </TimelineContextProvider>
   );
 };
 
