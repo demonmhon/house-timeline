@@ -1,0 +1,54 @@
+@import '../../scss/variables';
+
+.timeline-container {
+  display: flex;
+  margin: 15px 0 30px;
+  padding: 0 0 30px;
+  border-bottom: solid 1px $gray;
+}
+
+.timeline {
+  $block-width: 30px;
+  $block-height: 40px;
+
+  &__peoples {
+    margin-right: 20px;
+    margin-top: $block-height;
+  }
+
+  &__label--hour,
+  &__label--people {
+    height: $block-height;
+    text-align: center;
+  }
+
+  &__label--hour {
+    width: $block-width * 2;
+  }
+
+  &__label--people {
+
+  }
+
+  &__hour-block {
+    &[data-hour$=":30"] {
+      margin-left: -$block-width;
+      margin-right: -$block-width;
+      .timeline__label--hour {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__people-time-block {
+    width: $block-width;
+    height: $block-height;
+    border: solid 1px $gray;
+  }
+
+  &__time-table {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 15px;
+  }
+}
