@@ -47,6 +47,16 @@
     width: $block-width;
     height: $block-height;
     border: solid 1px $gray;
+
+    &[data-area="Living Room"] {
+      background-color: $living-room;
+    }
+    &[data-area="Kitchen"] {
+      background-color:  $backyard;
+    }
+    &[data-area="Backyard"] {
+      background-color: $kitchen;
+    }
   }
 
   &__time-table {

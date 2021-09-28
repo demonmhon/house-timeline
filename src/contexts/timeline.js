@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash'
 
 const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
 const areas = ['Living Room', 'Kitchen', 'Backyard'];
@@ -16,20 +17,10 @@ hours
   .forEach((h) => {
     hourTimeline.push(...h);
   });
+
 const initTimeline = {
-  '0000': {
-    occupiedRoom: {
-      livingRoom: [''],
-      kitchen: [''],
-      backyard: [''],
-    },
-  },
-  '0030': {
-    occupiedRoom: {
-      livingRoom: [''],
-      kitchen: [''],
-      backyard: [''],
-    },
+  '': {
+    '00:00': 'Kitchen'
   },
 };
 
@@ -38,8 +29,19 @@ export const TimelineContext = createContext({});
 export const TimelineContextProvider = ({ children }) => {
   const [timeline, setTimeline] = useState(initTimeline);
 
-  const addTime = (people, from, to) => {
-    console.log('add time', people, from, to);
+  const addTime = (people, area, from, to) => {
+    const newTimeline = _.cloneDeep(timeline)
+    if (!newTimeline[people]) {
+      newTimeline[people] = {
+        [from]: area
+      }
+    }
+    const timeIndex = [hourTimeline.indexOf(from), hourTimeline.indexOf(to)]
+    const timeRange = [...hourTimeline].slice(timeIndex[0], timeIndex[1])
+    for (const time of timeRange) {
+      newTimeline[people][time] = area
+    }
+    setTimeline(newTimeline)
   };
 
   const store = {

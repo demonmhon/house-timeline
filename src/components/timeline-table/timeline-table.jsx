@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash'
 
 import { useTimelineContext } from '../../contexts/timeline';
 import './timeline-table.scss';
@@ -27,11 +28,12 @@ const HourLabel = (props = {}) => {
 };
 
 const PeopleTimeBlock = (props = {}) => {
-  return <div className="timeline__people-time-block"></div>;
+  const { area } = props
+  return <div className="timeline__people-time-block" data-tracked={!!area} data-area={area}></div>;
 };
 
 const TimelineTable = (props) => {
-  const { data, peoples, areas } = useTimelineContext();
+  const { timeline, peoples, areas } = useTimelineContext();
   return (
     <div className="timeline-container">
       <div className="timeline__peoples">
@@ -46,13 +48,15 @@ const TimelineTable = (props) => {
               <HourLabel>{h}</HourLabel>
               <div key={h} data-hour={h} className="timeline__used-block">
                 {peoples.map((name) => {
-                  return <PeopleTimeBlock key={`${h}${name}`} used={false} />;
+                  return <PeopleTimeBlock key={`${h}${name}`} area={_.get(timeline, `${name}.${h}`, '')} />;
                 })}
               </div>
             </div>
           );
         })}
       </div>
+
+      <pre style={{ fontSize: '12px' }}>{JSON.stringify(timeline, null, '  ')}</pre>
     </div>
   );
 };

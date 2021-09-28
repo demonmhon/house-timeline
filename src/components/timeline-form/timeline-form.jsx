@@ -34,12 +34,11 @@ const TimelineForm = (props) => {
   const { addTime } = useTimelineContext();
 
   const addData = () => {
-    const { name, from, to } = newData
-    addTime(name, from, to)
+    const { name, area, from, to } = newData
+    addTime(name, area, from, to)
   };
 
   const setForm = (field, value) => {
-    console.log('field, value', field, value);
     setNewData({
       ...newData,
       [field]: value
