@@ -30,7 +30,11 @@ const HourLabel = (props = {}) => {
 
 const AreaLagend = (props = {}) => {
   const { name } = props;
-  return <div className="timeline__area-legend" data-area={name}>{name}</div>;
+  return (
+    <div className="timeline__area-legend" data-area={name}>
+      {name}
+    </div>
+  );
 };
 
 const PeopleTimeBlock = (props = {}) => {

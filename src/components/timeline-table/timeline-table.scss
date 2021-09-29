@@ -8,11 +8,11 @@
   $hour-label-height: 25px;
   $block-width: 30px;
   $block-height: 40px;
+  margin: 15px 0 30px;
+  padding: 15px 0;
 
   border: solid 1px $gray;
   border-width: 1px 0;
-  margin: 15px 0 30px;
-  padding: 15px 0;
 
   h2 {
     color: $font-color;
@@ -36,8 +36,8 @@
 
   &__label--people {
     height: $block-height;
-    line-height: $block-height;
     padding-right: 20px;
+    line-height: $block-height;
     border-right: solid 1px $gray;
   }
 
@@ -88,20 +88,20 @@
   }
 
   &__area-legend {
-    display: block;
     position: relative;
-    font-size: .85rem;
+    display: block;
+    font-size: 0.85rem;
 
     & + & {
       margin: 15px 0 0;
     }
 
     &::before {
-      content: '';
       display: inline-block;
       width: 25px;
       height: 10px;
       margin-right: 10px;
+      content: '';
     }
 
     @media (min-width: 480px) {

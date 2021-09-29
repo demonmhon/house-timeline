@@ -6,7 +6,7 @@ import { App } from './app';
 describe('App', () => {
   test('Should rendered properly', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('.app').exists()).toBe(true);
-    expect(wrapper.find('.app__body').exists()).toBe(true);
+    expect(wrapper.find('.app-container').exists()).toBe(true);
+    expect(wrapper.find('.app-body').exists()).toBe(true);
   });
 });

@@ -20,18 +20,17 @@ const Select = (props) => {
   );
 };
 
-
 Select.propTypes = {
   label: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string),
   defaultValue: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 Select.defaultProps = {
   label: '',
   items: [],
   defaultValue: '',
-  onChange() {}
+  onChange() {},
 };
 
 export default Select;

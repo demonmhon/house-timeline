@@ -22,12 +22,12 @@ export const TimelineContextProvider = ({ children }) => {
   const [timeline, setTimeline] = useState(storedValue, storedValue);
 
   useEffect(() => {
-    setStoredValue(timeline)
-  }, [timeline])
+    setStoredValue(timeline);
+  }, [timeline]);
 
   const addTime = (people, area, from, to) => {
     const newTimeline = _.cloneDeep(timeline);
-    if (!people) return
+    if (!people) return;
     if (!newTimeline[people]) {
       newTimeline[people] = {
         [from]: area,
