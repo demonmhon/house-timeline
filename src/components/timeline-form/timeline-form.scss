@@ -1,14 +1,58 @@
 @import '../../scss/variables';
 
 .form {
+  padding: 15px 15px 20px;
   background-color: #fff;
-  border-radius: 3px;
-  padding: 15px;
+  border-radius: 4px;
 
   h2 {
-    font-size: 1.2rem;
     color: $blue;
-    margin: 0;
-    padding: 5px 0 15px;
+  }
+
+  &__input {
+    &-group {
+      margin-top: 5px;
+      display: flex;
+
+      .select + .select {
+        margin-left: 8px;
+      }
+    }
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: flex-end;
+
+      &-group {
+        flex: 1;
+        margin-right: 15px;
+        margin-top: 0;
+
+        &--unset {
+          flex: unset;
+        }
+      }
+
+      [data-name="From"],
+      [data-name="To"] {
+        width: 100px;
+        flex: unset;
+      }
+    }
+  }
+
+  button {
+    color: #fff;
+    background-color: $font-color;
+    padding: 8px 20px;
+    line-height: 1.25;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      width: auto;
+    }
   }
 }

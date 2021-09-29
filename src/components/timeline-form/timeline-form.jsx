@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
+import Select from '../select';
 import { useTimelineContext } from '../../contexts/timeline';
 import './timeline-form.scss';
 
@@ -11,71 +11,66 @@ const initData = {
   to: '',
 };
 
-const Select = (props) => {
-  const { label = '', items = [], onChange } = props;
-  return (
-    <label>
-      <span>{label}</span>
-      <select onChange={(e) => onChange(e.target.value)}>
-        <option></option>
-        {items.map((item) => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-};
-
-const TimelineForm = (props) => {
+const TimelineForm = () => {
   const [newData, setNewData] = useState({ ...initData });
   const { peoples, areas, hours } = useTimelineContext();
   const { addTime } = useTimelineContext();
 
-  const addData = () => {
-    const { name, area, from, to } = newData
-    addTime(name, area, from, to)
+  const resetForm = () => {
+    setNewData({ ...initData });
   };
 
   const setForm = (field, value) => {
     setNewData({
       ...newData,
-      [field]: value
-    })
+      [field]: value,
+    });
+  };
+
+  const addData = () => {
+    const { name, area, from, to } = newData;
+    addTime(name, area, from, to);
+    resetForm();
   };
 
   return (
     <div className="form">
       <h2>Timeline Entry</h2>
-      <div className="form-input">
-        <Select
-          label={'Name'}
-          items={peoples}
-          onChange={(value) => setForm('name', value)}
-        />
-        <Select
-          label={'Area'}
-          items={areas}
-          onChange={(value) => setForm('area', value)}
-        />
-        <Select
-          label={'From'}
-          items={hours}
-          onChange={(value) => setForm('from', value)}
-        />
-        <Select
-          label={'To'}
-          items={hours}
-          onChange={(value) => setForm('to', value)}
-        />
-        <button onClick={() => addData()}>Add</button>
+      <div className="form__input">
+        <div className="form__input-group">
+          <Select
+            label={'Name'}
+            items={peoples}
+            defaultValue={newData.name}
+            onChange={(value) => setForm('name', value)}
+          />
+        </div>
+        <div className="form__input-group">
+          <Select
+            label={'Area'}
+            items={areas}
+            defaultValue={newData.area}
+            onChange={(value) => setForm('area', value)}
+          />
+        </div>
+        <div className="form__input-group form__input-group--unset">
+          <Select
+            label={'From'}
+            items={hours}
+            defaultValue={newData.from}
+            onChange={(value) => setForm('from', value)}
+          />
+          <Select
+            label={'To'}
+            items={hours}
+            defaultValue={newData.to}
+            onChange={(value) => setForm('to', value)}
+          />
+        </div>
+        <button onClick={() => addData()}>&#43; Add</button>
       </div>
     </div>
   );
 };
-
-TimelineForm.propTypes = {};
-TimelineForm.defaultProps = {};
 
 export default TimelineForm;

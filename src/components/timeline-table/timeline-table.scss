@@ -2,9 +2,6 @@
 
 .timeline-container {
   display: flex;
-  margin: 15px 0 30px;
-  padding: 0 0 30px;
-  border-bottom: solid 1px $gray;
 }
 
 .timeline {
@@ -12,8 +9,16 @@
   $block-width: 30px;
   $block-height: 40px;
 
+  border: solid 1px $gray;
+  border-width: 1px 0;
+  margin: 15px 0 30px;
+  padding: 15px 0;
+
+  h2 {
+    color: $font-color;
+  }
+
   &__peoples {
-    margin-right: 20px;
     margin-top: $hour-label-height;
   }
 
@@ -23,20 +28,23 @@
   }
 
   &__label--hour {
+    width: $block-width * 2;
     height: $hour-label-height;
     font-size: 0.75rem;
-    width: $block-width * 2;
+    border-right: solid 1px $gray;
   }
 
   &__label--people {
     height: $block-height;
     line-height: $block-height;
+    padding-right: 20px;
+    border-right: solid 1px $gray;
   }
 
   &__hour-block {
     &[data-hour$=':30'] {
-      margin-left: -$block-width;
-      margin-right: -$block-width;
+      margin-right: -#{$block-width};
+      margin-left: calc(-#{$block-width} - 1px);
       .timeline__label--hour {
         visibility: hidden;
       }
@@ -48,21 +56,25 @@
     height: $block-height;
     border: solid 1px $gray;
 
-    &[data-area="Living Room"] {
+    &[data-area='Living Room'] {
       background-color: $living-room;
     }
-    &[data-area="Kitchen"] {
-      background-color:  $backyard;
+    &[data-area='Kitchen'] {
+      background-color: $backyard;
     }
-    &[data-area="Backyard"] {
+    &[data-area='Backyard'] {
       background-color: $kitchen;
+    }
+
+    & + .timeline__people-time-block {
+      border-top: none;
     }
   }
 
   &__time-table {
-    display: flex;
-    overflow-x: scroll;
-    padding-bottom: 15px;
     position: relative;
+    display: flex;
+    padding-bottom: 20px;
+    overflow-x: scroll;
   }
 }

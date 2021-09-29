@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash'
+import _ from 'lodash';
 
 import { useTimelineContext } from '../../contexts/timeline';
 import './timeline-table.scss';
@@ -28,35 +28,47 @@ const HourLabel = (props = {}) => {
 };
 
 const PeopleTimeBlock = (props = {}) => {
-  const { area } = props
-  return <div className="timeline__people-time-block" data-tracked={!!area} data-area={area}></div>;
+  const { area } = props;
+  return (
+    <div
+      className="timeline__people-time-block"
+      data-tracked={!!area}
+      data-area={area}
+    ></div>
+  );
 };
 
 const TimelineTable = (props) => {
-  const { timeline, peoples, areas } = useTimelineContext();
+  const { timeline, peoples } = useTimelineContext();
   return (
-    <div className="timeline-container">
-      <div className="timeline__peoples">
-        {peoples.map((name) => {
-          return <PeopleLabel key={name}>{name}</PeopleLabel>;
-        })}
-      </div>
-      <div className="timeline__time-table">
-        {hourTimeline.map((h) => {
-          return (
-            <div key={h} data-hour={h} className="timeline__hour-block">
-              <HourLabel>{h}</HourLabel>
-              <div key={h} data-hour={h} className="timeline__used-block">
-                {peoples.map((name) => {
-                  return <PeopleTimeBlock key={`${h}${name}`} area={_.get(timeline, `${name}.${h}`, '')} />;
-                })}
+    <div className="timeline">
+      <h2>Timeline</h2>
+      <div className="timeline-container">
+        <div className="timeline__peoples">
+          {peoples.map((name) => {
+            return <PeopleLabel key={name}>{name}</PeopleLabel>;
+          })}
+        </div>
+        <div className="timeline__time-table">
+          {hourTimeline.map((h) => {
+            return (
+              <div key={h} data-hour={h} className="timeline__hour-block">
+                <HourLabel>{h}</HourLabel>
+                <div key={h} data-hour={h} className="timeline__used-block">
+                  {peoples.map((name) => {
+                    return (
+                      <PeopleTimeBlock
+                        key={`${h}${name}`}
+                        area={_.get(timeline, `${name}.${h}`, '')}
+                      />
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-
-      <pre style={{ fontSize: '12px' }}>{JSON.stringify(timeline, null, '  ')}</pre>
     </div>
   );
 };
