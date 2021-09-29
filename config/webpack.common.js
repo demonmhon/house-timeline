@@ -69,10 +69,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, `../src/config/config.${process.env.NODE_ENV}.json`),
-          to: 'config.json',
-        },
-        {
           from: path.resolve(__dirname, '../src/public/'),
           to: path.resolve(__dirname, '../dist'),
           globOptions: {
