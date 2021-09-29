@@ -1,9 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import useLocalStorage from '../hooks/use-localstorage';
-import { useEffect } from 'react';
 
 const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
 const areas = ['Living Room', 'Kitchen', 'Backyard'];
@@ -16,20 +15,19 @@ Array(24)
     hourTimeline.push(...h);
   });
 
-const initTimeline = {
-  '': {
-    '00:00': 'Kitchen',
-  },
-};
-
 export const TimelineContext = createContext({});
 
 export const TimelineContextProvider = ({ children }) => {
-  const [storedValue, setStoredValue] = useLocalStorage('timeline', { ...initTimeline });
+  const [storedValue, setStoredValue] = useLocalStorage('timeline', {});
   const [timeline, setTimeline] = useState(storedValue, storedValue);
+
+  useEffect(() => {
+    setStoredValue(timeline)
+  }, [timeline])
 
   const addTime = (people, area, from, to) => {
     const newTimeline = _.cloneDeep(timeline);
+    if (!people) return
     if (!newTimeline[people]) {
       newTimeline[people] = {
         [from]: area,
@@ -41,7 +39,6 @@ export const TimelineContextProvider = ({ children }) => {
       newTimeline[people][time] = area;
     }
     setTimeline(newTimeline);
-    setStoredValue(newTimeline)
   };
 
   const store = {

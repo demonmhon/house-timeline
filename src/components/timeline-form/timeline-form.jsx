@@ -16,10 +16,6 @@ const TimelineForm = () => {
   const { peoples, areas, hours } = useTimelineContext();
   const { addTime } = useTimelineContext();
 
-  const resetForm = () => {
-    setNewData({ ...initData });
-  };
-
   const setForm = (field, value) => {
     setNewData({
       ...newData,
@@ -30,7 +26,6 @@ const TimelineForm = () => {
   const addData = () => {
     const { name, area, from, to } = newData;
     addTime(name, area, from, to);
-    resetForm();
   };
 
   return (
