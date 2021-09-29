@@ -43,7 +43,7 @@
   button {
     color: #fff;
     background-color: $font-color;
-    padding: 8px 20px;
+    padding: 12px 20px;
     line-height: 1.25;
     border: none;
     border-radius: 3px;
@@ -53,6 +53,7 @@
     @media (min-width: 768px) {
       margin-top: 0;
       width: auto;
+      padding: 8px 20px;
     }
   }
 }

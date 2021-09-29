@@ -20,11 +20,17 @@ hours
   });
 
 const PeopleLabel = (props = {}) => {
-  return <div className="timeline__label--people">{props.children}</div>;
+  const { name } = props;
+  return <div className="timeline__label--people">{name}</div>;
 };
 
 const HourLabel = (props = {}) => {
   return <div className="timeline__label--hour">{props.children}</div>;
+};
+
+const AreaLagend = (props = {}) => {
+  const { name } = props;
+  return <div className="timeline__area-legend" data-area={name}>{name}</div>;
 };
 
 const PeopleTimeBlock = (props = {}) => {
@@ -39,15 +45,15 @@ const PeopleTimeBlock = (props = {}) => {
 };
 
 const TimelineTable = (props) => {
-  const { timeline, peoples } = useTimelineContext();
+  const { timeline, peoples, areas } = useTimelineContext();
   return (
     <div className="timeline">
       <h2>Timeline</h2>
       <div className="timeline-container">
         <div className="timeline__peoples">
-          {peoples.map((name) => {
-            return <PeopleLabel key={name}>{name}</PeopleLabel>;
-          })}
+          {peoples.map((name) => (
+            <PeopleLabel key={name} name={name} />
+          ))}
         </div>
         <div className="timeline__time-table">
           {hourTimeline.map((h) => {
@@ -68,6 +74,11 @@ const TimelineTable = (props) => {
             );
           })}
         </div>
+      </div>
+      <div className="timeline__area-legends">
+        {areas.map((name) => (
+          <AreaLagend key={name} name={name} />
+        ))}
       </div>
     </div>
   );

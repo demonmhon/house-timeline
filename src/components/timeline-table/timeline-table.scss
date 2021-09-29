@@ -77,4 +77,49 @@
     padding-bottom: 20px;
     overflow-x: scroll;
   }
+
+  &__area-legends {
+    margin: 15px 0;
+
+    @media (min-width: 480px) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__area-legend {
+    display: block;
+    position: relative;
+    font-size: .85rem;
+
+    & + & {
+      margin: 15px 0 0;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 25px;
+      height: 10px;
+      margin-right: 10px;
+    }
+
+    @media (min-width: 480px) {
+      display: inline-block;
+
+      & + & {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    &[data-area='Living Room']::before {
+      background-color: $living-room;
+    }
+    &[data-area='Kitchen']::before {
+      background-color: $backyard;
+    }
+    &[data-area='Backyard']::before {
+      background-color: $kitchen;
+    }
+  }
 }
