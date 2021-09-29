@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import { TimelineContextProvider } from './contexts/timeline';
 import { Header, TimelineTable, TimelineForm } from './components';
 
-const App = (props) => {
-  useEffect(() => {
-    props.init();
-  }, []);
-
+const App = () => {
   return (
     <TimelineContextProvider>
       <div className="app-container">
@@ -20,13 +15,6 @@ const App = (props) => {
       </div>
     </TimelineContextProvider>
   );
-};
-
-App.propTypes = {
-  init: PropTypes.func,
-};
-App.defaultProps = {
-  init() {},
 };
 
 export { App };
