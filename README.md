@@ -39,7 +39,6 @@ $ npm run start:dev
 | `test:coverage` | Generate a coverage report |
 | `test:watch` | Run all the tests and keep on watch mode |
 | `build` | Build the production build |
-| `analyze` | Run `webpack-bundle-analyzer` to visualize size of webpack output files |
 
 ## License
 
