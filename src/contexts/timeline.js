@@ -6,7 +6,7 @@ import useLocalStorage from '../hooks/use-localstorage';
 
 const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
 const areas = ['Living Room', 'Kitchen', 'Backyard'];
-const hourTimeline = [];
+export const hourTimeline = [];
 Array(24)
   .fill('')
   .map((a, index) => `${index}`.padStart(2, '0'))

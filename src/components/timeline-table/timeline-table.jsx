@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -51,8 +51,8 @@ const PeopleTimeBlock = (props = {}) => {
   );
 };
 
-const TimelineTable = (props) => {
-  const { timeline, peoples, areas } = useTimelineContext();
+export const TimelineTable = (props) => {
+  const { hours, timeline, peoples, areas } = props;
   return (
     <div className="timeline">
       <h2>Timeline</h2>
@@ -63,7 +63,7 @@ const TimelineTable = (props) => {
           ))}
         </div>
         <div className="timeline__time-table">
-          {hourTimeline.map((h) => {
+          {hours.map((h) => {
             return (
               <div key={h} data-hour={h} className="timeline__hour-block">
                 <HourLabel>{h}</HourLabel>
@@ -99,7 +99,23 @@ const TimelineTable = (props) => {
   );
 };
 
-TimelineTable.propTypes = {};
-TimelineTable.defaultProps = {};
+const TimelineTableWithContext = () => {
+  const { hours, timeline, peoples, areas } = useTimelineContext();
+  const props = { hours, timeline, peoples, areas };
+  return <TimelineTable {...props} />;
+};
 
-export default TimelineTable;
+TimelineTable.defaultProps = {
+  timeline: {},
+  peoples: [],
+  areas: [],
+  hours: [],
+};
+TimelineTable.propTypes = {
+  timeline: PropTypes.object,
+  peoples: PropTypes.arrayOf(PropTypes.string),
+  areas: PropTypes.arrayOf(PropTypes.string),
+  hours: PropTypes.arrayOf(PropTypes.string),
+};
+
+export default TimelineTableWithContext;

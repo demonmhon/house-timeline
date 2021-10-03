@@ -1,3 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> should match snapshot 1`] = `ShallowWrapper {}`;
+exports[`<Select /> should match snapshot 1`] = `
+<label
+  className="select"
+  data-name="Select Component"
+>
+  <span
+    className="select__label"
+  >
+    Select Component
+  </span>
+  <select
+    onChange={[Function]}
+    value=""
+  >
+    <option />
+    <option
+      key="one"
+      value="one"
+    >
+      one
+    </option>
+    <option
+      key="two"
+      value="two"
+    >
+      two
+    </option>
+  </select>
+</label>
+`;

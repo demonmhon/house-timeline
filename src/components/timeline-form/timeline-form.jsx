@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import Select from '../select';
 import { useTimelineContext } from '../../contexts/timeline';
@@ -11,10 +12,10 @@ const initData = {
   to: '',
 };
 
-const TimelineForm = () => {
+export const TimelineForm = (props) => {
   const [newData, setNewData] = useState({ ...initData });
-  const { peoples, areas, hours } = useTimelineContext();
-  const { addTime } = useTimelineContext();
+  const { peoples, areas, hours } = props;
+  const { addTime } = props;
 
   const setForm = (field, value) => {
     setNewData({
@@ -68,4 +69,25 @@ const TimelineForm = () => {
   );
 };
 
-export default TimelineForm;
+TimelineForm.defaultProps = {
+  timeline: {},
+  peoples: [],
+  areas: [],
+  hours: [],
+  addTime() {},
+};
+TimelineForm.propTypes = {
+  timeline: PropTypes.object,
+  peoples: PropTypes.arrayOf(PropTypes.string),
+  areas: PropTypes.arrayOf(PropTypes.string),
+  hours: PropTypes.arrayOf(PropTypes.string),
+  addTime: PropTypes.func,
+};
+
+const TimelineFormWithContext = () => {
+  const { hours, timeline, peoples, areas, addTime } = useTimelineContext();
+  const props = { hours, timeline, peoples, areas, addTime };
+  return <TimelineForm {...props} />;
+};
+
+export default TimelineFormWithContext;

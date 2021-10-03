@@ -1,5 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+
 import Select from './select';
 
 describe('<Select />', () => {
@@ -8,7 +10,7 @@ describe('<Select />', () => {
     const wrapper = shallow(
       <Select label={'Select Component'} items={items} />
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 
   it('Should rendered with options properly', () => {
