@@ -38,13 +38,16 @@ const AreaLagend = (props = {}) => {
 };
 
 const PeopleTimeBlock = (props = {}) => {
-  const { area } = props;
+  const { area, hasOther } = props;
   return (
     <div
       className="timeline__people-time-block"
       data-tracked={!!area}
+      data-has-other={hasOther}
       data-area={area}
-    ></div>
+    >
+      {hasOther ? '!' : ''}
+    </div>
   );
 };
 
@@ -66,10 +69,18 @@ const TimelineTable = (props) => {
                 <HourLabel>{h}</HourLabel>
                 <div key={h} data-hour={h} className="timeline__used-block">
                   {peoples.map((name) => {
+                    const at = _.get(timeline, `${name}.${h}`, '');
+                    const others = peoples.filter((p) => p !== name);
+                    const hasOther = at
+                      ? others.filter(
+                          (other) => _.get(timeline, `${other}.${h}`) === at
+                        ).length > 0
+                      : false;
                     return (
                       <PeopleTimeBlock
-                        key={`${h}${name}`}
-                        area={_.get(timeline, `${name}.${h}`, '')}
+                        key={`${name}-${h}`}
+                        hasOther={hasOther}
+                        area={at}
                       />
                     );
                   })}

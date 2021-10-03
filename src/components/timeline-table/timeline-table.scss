@@ -54,6 +54,10 @@
   &__people-time-block {
     width: $block-width;
     height: $block-height;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: $block-height;
+    text-align: center;
     border: solid 1px $gray;
 
     &[data-area='Living Room'] {
