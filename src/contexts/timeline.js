@@ -6,20 +6,25 @@ import useLocalStorage from '../hooks/use-localstorage';
 
 const peoples = ['Bill', 'Elon', 'Mark', 'Tim'];
 const areas = ['Living Room', 'Kitchen', 'Backyard'];
-export const hourTimeline = [];
-Array(24)
-  .fill('')
-  .map((a, index) => `${index}`.padStart(2, '0'))
-  .map((h) => [`${h}:00`, `${h}:30`])
-  .forEach((h) => {
-    hourTimeline.push(...h);
-  });
+
+export const generateHours = () => {
+  const result = [];
+  Array(24)
+    .fill('')
+    .map((a, index) => `${index}`.padStart(2, '0'))
+    .map((h) => [`${h}:00`, `${h}:30`])
+    .forEach((h) => {
+      result.push(...h);
+    });
+  return result;
+};
 
 export const TimelineContext = createContext({});
 
 export const TimelineContextProvider = ({ children }) => {
   const [storedValue, setStoredValue] = useLocalStorage('timeline', {});
   const [timeline, setTimeline] = useState(storedValue, storedValue);
+  const hourTimeline = generateHours();
 
   useEffect(() => {
     setStoredValue(timeline);

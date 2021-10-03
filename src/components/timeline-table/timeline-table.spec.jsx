@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import { hourTimeline } from '../../contexts/timeline';
+import { generateHours } from '../../contexts/timeline';
 import { TimelineTable } from './timeline-table';
 
 describe('<TimelineTable />', () => {
   it('should match snapshot', () => {
     const props = {
-      hours: hourTimeline,
+      hours: generateHours(),
       peoples: ['John', 'Dan'],
       areas: ['Bed Room', 'Toilet'],
       timeline: {
