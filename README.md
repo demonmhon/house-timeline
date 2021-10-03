@@ -33,7 +33,7 @@ $ npm run start:dev
 
 | Script | Description |
 |-|-|
-| `start` | Serve the built app fron `dist`, (must build first) |
+| `start` | Serve the built app from `dist`, (must build first) |
 | `start:dev` | Start the app with `development` mode, `webpack-dev-server` and hot module replacement (HMR) enabled |
 | `test` | Jest and execute all the tests |
 | `test:coverage` | Generate a coverage report |
