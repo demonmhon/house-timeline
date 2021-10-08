@@ -14,7 +14,7 @@ const initData = {
 
 export const TimelineForm = (props) => {
   const [newData, setNewData] = useState({ ...initData });
-  const { peoples, areas, hours } = props;
+  const { timeline, peoples, areas, hours } = props;
   const { addTime } = props;
 
   const setForm = (field, value) => {
@@ -26,7 +26,26 @@ export const TimelineForm = (props) => {
 
   const addData = () => {
     const { name, area, from, to } = newData;
-    addTime(name, area, from, to);
+    const timeIndex = [hours.indexOf(from), hours.indexOf(to)];
+    const timeRange = [...hours].slice(timeIndex[0], timeIndex[1]);
+    if (timeRange.length <= 0) {
+      alert('Invalid time selected');
+      return;
+    }
+    const peopleTime = timeline[name];
+    let hasDataIntime = false;
+    timeRange.forEach((time) => {
+      if (peopleTime[time]) {
+        hasDataIntime = true;
+      }
+    });
+    if (hasDataIntime) {
+      if (confirm('Already has data in specified time, replace it?')) {
+        addTime(name, area, from, to);
+      }
+    } else {
+      addTime(name, area, from, to);
+    }
   };
 
   return (
@@ -85,8 +104,9 @@ TimelineForm.propTypes = {
 };
 
 const TimelineFormWithContext = () => {
-  const { hours, timeline, peoples, areas, addTime } = useTimelineContext();
-  const props = { hours, timeline, peoples, areas, addTime };
+  const { hours, timeline, peoples, areas, addTime, hasDataInTime } =
+    useTimelineContext();
+  const props = { hours, timeline, peoples, areas, addTime, hasDataInTime };
   return <TimelineForm {...props} />;
 };
 

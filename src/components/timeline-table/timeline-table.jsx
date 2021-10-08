@@ -38,13 +38,20 @@ const AreaLagend = (props = {}) => {
 };
 
 const PeopleTimeBlock = (props = {}) => {
-  const { area, hasOther } = props;
+  const { name, time, area, hasOther, onRemove } = props;
   return (
     <div
       className="timeline__people-time-block"
       data-tracked={!!area}
       data-has-other={hasOther}
       data-area={area}
+      onClick={() => {
+        if (area) {
+          if (confirm(`Delete record of ${name} on ${time}?`)) {
+            onRemove();
+          }
+        }
+      }}
     >
       {hasOther ? '!' : ''}
     </div>
@@ -52,7 +59,7 @@ const PeopleTimeBlock = (props = {}) => {
 };
 
 export const TimelineTable = (props) => {
-  const { hours, timeline, peoples, areas } = props;
+  const { hours, timeline, peoples, areas, removeTime } = props;
   return (
     <div className="timeline">
       <h2>Timeline</h2>
@@ -72,15 +79,18 @@ export const TimelineTable = (props) => {
                     const at = _.get(timeline, `${name}.${h}`, '');
                     const others = peoples.filter((p) => p !== name);
                     const hasOther = at
-                      ? others.filter(
+                      ? others.find(
                           (other) => _.get(timeline, `${other}.${h}`) === at
-                        ).length > 0
-                      : false;
+                        )
+                      : null;
                     return (
                       <PeopleTimeBlock
                         key={`${name}-${h}`}
-                        hasOther={hasOther}
+                        name={name}
+                        time={h}
+                        hasOther={!!hasOther}
                         area={at}
+                        onRemove={() => removeTime(name, h)}
                       />
                     );
                   })}
@@ -100,8 +110,8 @@ export const TimelineTable = (props) => {
 };
 
 const TimelineTableWithContext = () => {
-  const { hours, timeline, peoples, areas } = useTimelineContext();
-  const props = { hours, timeline, peoples, areas };
+  const { hours, timeline, peoples, areas, removeTime } = useTimelineContext();
+  const props = { hours, timeline, peoples, areas, removeTime };
   return <TimelineTable {...props} />;
 };
 
@@ -110,12 +120,14 @@ TimelineTable.defaultProps = {
   peoples: [],
   areas: [],
   hours: [],
+  removeTime() {},
 };
 TimelineTable.propTypes = {
   timeline: PropTypes.object,
   peoples: PropTypes.arrayOf(PropTypes.string),
   areas: PropTypes.arrayOf(PropTypes.string),
   hours: PropTypes.arrayOf(PropTypes.string),
+  removeTime: PropTypes.func,
 };
 
 export default TimelineTableWithContext;

@@ -52,6 +52,7 @@
   }
 
   &__people-time-block {
+    cursor: pointer;
     width: $block-width;
     height: $block-height;
     font-weight: 500;

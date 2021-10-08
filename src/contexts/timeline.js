@@ -46,12 +46,19 @@ export const TimelineContextProvider = ({ children }) => {
     setTimeline(newTimeline);
   };
 
+  const removeTime = (people, time) => {
+    const newTimeline = _.cloneDeep(timeline);
+    newTimeline[people][time] = '';
+    setTimeline(newTimeline);
+  }
+
   const store = {
     peoples,
     areas,
     hours: hourTimeline,
     timeline,
     addTime,
+    removeTime,
   };
 
   return (
