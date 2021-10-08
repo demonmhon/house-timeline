@@ -64,10 +64,10 @@
       background-color: $living-room;
     }
     &[data-area='Kitchen'] {
-      background-color: $backyard;
+      background-color: $kitchen;
     }
     &[data-area='Backyard'] {
-      background-color: $kitchen;
+      background-color: $backyard;
     }
 
     & + .timeline__people-time-block {
@@ -120,10 +120,10 @@
       background-color: $living-room;
     }
     &[data-area='Kitchen']::before {
-      background-color: $backyard;
+      background-color: $kitchen;
     }
     &[data-area='Backyard']::before {
-      background-color: $kitchen;
+      background-color: $backyard;
     }
   }
 }
