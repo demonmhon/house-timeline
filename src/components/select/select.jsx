@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import './select.scss';
 
-const Select = (props) => {
-  const { label = '', items = [], defaultValue, onChange } = props;
+const Select = ({ label = '', items = [], defaultValue, onChange }) => {
   return (
     <label className="select" data-name={label}>
       <span className="select__label">{label}</span>

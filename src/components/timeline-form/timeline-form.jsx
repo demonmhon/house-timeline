@@ -12,10 +12,8 @@ const initData = {
   to: '',
 };
 
-export const TimelineForm = (props) => {
+export const TimelineForm = ({ timeline, peoples, areas, hours, addTime }) => {
   const [newData, setNewData] = useState({ ...initData });
-  const { timeline, peoples, areas, hours } = props;
-  const { addTime } = props;
 
   const setForm = (field, value) => {
     setNewData({

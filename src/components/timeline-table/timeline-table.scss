@@ -52,7 +52,6 @@
   }
 
   &__people-time-block {
-    cursor: pointer;
     width: $block-width;
     height: $block-height;
     font-weight: 500;
@@ -60,6 +59,7 @@
     line-height: $block-height;
     text-align: center;
     border: solid 1px $gray;
+    cursor: pointer;
 
     &[data-area='Living Room'] {
       background-color: $living-room;

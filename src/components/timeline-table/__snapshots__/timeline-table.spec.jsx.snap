@@ -42,11 +42,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-00:00"
+            name="John"
+            onRemove={[Function]}
+            time="00:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-00:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="00:00"
           />
         </div>
       </div>
@@ -67,11 +73,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-00:30"
+            name="John"
+            onRemove={[Function]}
+            time="00:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-00:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="00:30"
           />
         </div>
       </div>
@@ -92,11 +104,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-01:00"
+            name="John"
+            onRemove={[Function]}
+            time="01:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-01:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="01:00"
           />
         </div>
       </div>
@@ -117,11 +135,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-01:30"
+            name="John"
+            onRemove={[Function]}
+            time="01:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-01:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="01:30"
           />
         </div>
       </div>
@@ -142,11 +166,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-02:00"
+            name="John"
+            onRemove={[Function]}
+            time="02:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-02:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="02:00"
           />
         </div>
       </div>
@@ -167,11 +197,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-02:30"
+            name="John"
+            onRemove={[Function]}
+            time="02:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-02:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="02:30"
           />
         </div>
       </div>
@@ -192,11 +228,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-03:00"
+            name="John"
+            onRemove={[Function]}
+            time="03:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-03:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="03:00"
           />
         </div>
       </div>
@@ -217,11 +259,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-03:30"
+            name="John"
+            onRemove={[Function]}
+            time="03:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-03:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="03:30"
           />
         </div>
       </div>
@@ -242,11 +290,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-04:00"
+            name="John"
+            onRemove={[Function]}
+            time="04:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-04:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="04:00"
           />
         </div>
       </div>
@@ -267,11 +321,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-04:30"
+            name="John"
+            onRemove={[Function]}
+            time="04:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-04:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="04:30"
           />
         </div>
       </div>
@@ -292,11 +352,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-05:00"
+            name="John"
+            onRemove={[Function]}
+            time="05:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-05:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="05:00"
           />
         </div>
       </div>
@@ -317,11 +383,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-05:30"
+            name="John"
+            onRemove={[Function]}
+            time="05:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-05:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="05:30"
           />
         </div>
       </div>
@@ -342,11 +414,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area="Bed Room"
             hasOther={false}
             key="John-06:00"
+            name="John"
+            onRemove={[Function]}
+            time="06:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-06:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="06:00"
           />
         </div>
       </div>
@@ -367,11 +445,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area="Bed Room"
             hasOther={false}
             key="John-06:30"
+            name="John"
+            onRemove={[Function]}
+            time="06:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-06:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="06:30"
           />
         </div>
       </div>
@@ -392,11 +476,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-07:00"
+            name="John"
+            onRemove={[Function]}
+            time="07:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-07:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="07:00"
           />
         </div>
       </div>
@@ -417,11 +507,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-07:30"
+            name="John"
+            onRemove={[Function]}
+            time="07:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-07:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="07:30"
           />
         </div>
       </div>
@@ -442,11 +538,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-08:00"
+            name="John"
+            onRemove={[Function]}
+            time="08:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-08:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="08:00"
           />
         </div>
       </div>
@@ -467,11 +569,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-08:30"
+            name="John"
+            onRemove={[Function]}
+            time="08:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-08:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="08:30"
           />
         </div>
       </div>
@@ -492,11 +600,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-09:00"
+            name="John"
+            onRemove={[Function]}
+            time="09:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-09:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="09:00"
           />
         </div>
       </div>
@@ -517,11 +631,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-09:30"
+            name="John"
+            onRemove={[Function]}
+            time="09:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-09:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="09:30"
           />
         </div>
       </div>
@@ -542,11 +662,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-10:00"
+            name="John"
+            onRemove={[Function]}
+            time="10:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-10:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="10:00"
           />
         </div>
       </div>
@@ -567,11 +693,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-10:30"
+            name="John"
+            onRemove={[Function]}
+            time="10:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-10:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="10:30"
           />
         </div>
       </div>
@@ -592,11 +724,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-11:00"
+            name="John"
+            onRemove={[Function]}
+            time="11:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-11:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="11:00"
           />
         </div>
       </div>
@@ -617,11 +755,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-11:30"
+            name="John"
+            onRemove={[Function]}
+            time="11:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-11:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="11:30"
           />
         </div>
       </div>
@@ -642,11 +786,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-12:00"
+            name="John"
+            onRemove={[Function]}
+            time="12:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-12:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="12:00"
           />
         </div>
       </div>
@@ -667,11 +817,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-12:30"
+            name="John"
+            onRemove={[Function]}
+            time="12:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-12:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="12:30"
           />
         </div>
       </div>
@@ -692,11 +848,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-13:00"
+            name="John"
+            onRemove={[Function]}
+            time="13:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-13:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="13:00"
           />
         </div>
       </div>
@@ -717,11 +879,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-13:30"
+            name="John"
+            onRemove={[Function]}
+            time="13:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-13:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="13:30"
           />
         </div>
       </div>
@@ -742,11 +910,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-14:00"
+            name="John"
+            onRemove={[Function]}
+            time="14:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-14:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="14:00"
           />
         </div>
       </div>
@@ -767,11 +941,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-14:30"
+            name="John"
+            onRemove={[Function]}
+            time="14:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-14:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="14:30"
           />
         </div>
       </div>
@@ -792,11 +972,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-15:00"
+            name="John"
+            onRemove={[Function]}
+            time="15:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-15:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="15:00"
           />
         </div>
       </div>
@@ -817,11 +1003,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-15:30"
+            name="John"
+            onRemove={[Function]}
+            time="15:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-15:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="15:30"
           />
         </div>
       </div>
@@ -842,11 +1034,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-16:00"
+            name="John"
+            onRemove={[Function]}
+            time="16:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-16:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="16:00"
           />
         </div>
       </div>
@@ -867,11 +1065,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-16:30"
+            name="John"
+            onRemove={[Function]}
+            time="16:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-16:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="16:30"
           />
         </div>
       </div>
@@ -892,11 +1096,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-17:00"
+            name="John"
+            onRemove={[Function]}
+            time="17:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-17:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="17:00"
           />
         </div>
       </div>
@@ -917,11 +1127,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-17:30"
+            name="John"
+            onRemove={[Function]}
+            time="17:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-17:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="17:30"
           />
         </div>
       </div>
@@ -942,11 +1158,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-18:00"
+            name="John"
+            onRemove={[Function]}
+            time="18:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-18:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="18:00"
           />
         </div>
       </div>
@@ -967,11 +1189,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-18:30"
+            name="John"
+            onRemove={[Function]}
+            time="18:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-18:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="18:30"
           />
         </div>
       </div>
@@ -992,11 +1220,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-19:00"
+            name="John"
+            onRemove={[Function]}
+            time="19:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-19:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="19:00"
           />
         </div>
       </div>
@@ -1017,11 +1251,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-19:30"
+            name="John"
+            onRemove={[Function]}
+            time="19:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-19:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="19:30"
           />
         </div>
       </div>
@@ -1042,11 +1282,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-20:00"
+            name="John"
+            onRemove={[Function]}
+            time="20:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-20:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="20:00"
           />
         </div>
       </div>
@@ -1067,11 +1313,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-20:30"
+            name="John"
+            onRemove={[Function]}
+            time="20:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-20:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="20:30"
           />
         </div>
       </div>
@@ -1092,11 +1344,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-21:00"
+            name="John"
+            onRemove={[Function]}
+            time="21:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-21:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="21:00"
           />
         </div>
       </div>
@@ -1117,11 +1375,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-21:30"
+            name="John"
+            onRemove={[Function]}
+            time="21:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-21:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="21:30"
           />
         </div>
       </div>
@@ -1142,11 +1406,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-22:00"
+            name="John"
+            onRemove={[Function]}
+            time="22:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-22:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="22:00"
           />
         </div>
       </div>
@@ -1167,11 +1437,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-22:30"
+            name="John"
+            onRemove={[Function]}
+            time="22:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-22:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="22:30"
           />
         </div>
       </div>
@@ -1192,11 +1468,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-23:00"
+            name="John"
+            onRemove={[Function]}
+            time="23:00"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-23:00"
+            name="Dan"
+            onRemove={[Function]}
+            time="23:00"
           />
         </div>
       </div>
@@ -1217,11 +1499,17 @@ exports[`<TimelineTable /> should match snapshot 1`] = `
             area=""
             hasOther={false}
             key="John-23:30"
+            name="John"
+            onRemove={[Function]}
+            time="23:30"
           />
           <PeopleTimeBlock
             area=""
             hasOther={false}
             key="Dan-23:30"
+            name="Dan"
+            onRemove={[Function]}
+            time="23:30"
           />
         </div>
       </div>

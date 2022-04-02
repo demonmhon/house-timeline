@@ -19,17 +19,15 @@ hours
     hourTimeline.push(...h);
   });
 
-const PeopleLabel = (props = {}) => {
-  const { name } = props;
+const PeopleLabel = ({ name }) => {
   return <div className="timeline__label--people">{name}</div>;
 };
 
-const HourLabel = (props = {}) => {
-  return <div className="timeline__label--hour">{props.children}</div>;
+const HourLabel = ({ children }) => {
+  return <div className="timeline__label--hour">{children}</div>;
 };
 
-const AreaLagend = (props = {}) => {
-  const { name } = props;
+const AreaLagend = ({ name }) => {
   return (
     <div className="timeline__area-legend" data-area={name}>
       {name}
@@ -37,8 +35,7 @@ const AreaLagend = (props = {}) => {
   );
 };
 
-const PeopleTimeBlock = (props = {}) => {
-  const { name, time, area, hasOther, onRemove } = props;
+const PeopleTimeBlock = ({ name, time, area, hasOther, onRemove }) => {
   return (
     <div
       className="timeline__people-time-block"
@@ -58,8 +55,13 @@ const PeopleTimeBlock = (props = {}) => {
   );
 };
 
-export const TimelineTable = (props) => {
-  const { hours, timeline, peoples, areas, removeTime } = props;
+export const TimelineTable = ({
+  hours,
+  timeline,
+  peoples,
+  areas,
+  removeTime,
+}) => {
   return (
     <div className="timeline">
       <h2>Timeline</h2>
@@ -128,6 +130,22 @@ TimelineTable.propTypes = {
   areas: PropTypes.arrayOf(PropTypes.string),
   hours: PropTypes.arrayOf(PropTypes.string),
   removeTime: PropTypes.func,
+};
+PeopleLabel.propTypes = {
+  name: PropTypes.string,
+};
+HourLabel.propTypes = {
+  children: PropTypes.node,
+};
+AreaLagend.propTypes = {
+  name: PropTypes.string,
+};
+PeopleTimeBlock.propTypes = {
+  name: PropTypes.string,
+  time: PropTypes.string,
+  area: PropTypes.string,
+  hasOther: PropTypes.bool,
+  onRemove: PropTypes.func,
 };
 
 export default TimelineTableWithContext;

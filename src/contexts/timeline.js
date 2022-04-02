@@ -50,7 +50,7 @@ export const TimelineContextProvider = ({ children }) => {
     const newTimeline = _.cloneDeep(timeline);
     newTimeline[people][time] = '';
     setTimeline(newTimeline);
-  }
+  };
 
   const store = {
     peoples,
